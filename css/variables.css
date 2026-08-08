@@ -1,1 +1,50 @@
-/* Nuvasah Interiors — CSS custom properties (design tokens) go here. */
+/* ==========================================================================
+   Nuvasah Interiors — Design Tokens
+   Style: Warm editorial (Version 1, approved) — minimalist, mid-century,
+   Scandinavian, refined against Decorilla.com's font pairing/structure.
+   Placeholder palette — revise once client logo/Instagram is available
+   ========================================================================== */
+
+:root {
+  /* Color — warm neutral base, muted gold/tan accent, low-contrast ink */
+  --color-bg: #FAF7F2;          /* warm off-white, paper-like */
+  --color-bg-alt: #F0EAE0;      /* slightly deeper section background */
+  --color-surface: #FFFFFF;     /* cards, forms */
+  --color-ink: #2B2622;         /* near-black warm charcoal, primary text */
+  --color-ink-muted: #6B6258;   /* secondary text, captions */
+  --color-accent: #B99B62;      /* muted gold/tan — editorial, Decorilla-inspired */
+  --color-accent-hover: #A3854E;
+  --color-line: #DFD6C8;        /* borders, dividers */
+  --color-success: #5C7A5E;     /* form confirmation, muted sage */
+  --color-error: #B54B3E;
+
+  /* Typography — thin high-contrast serif for headlines (Decorilla-style), clean sans body */
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+
+  --fs-h1: clamp(2.5rem, 5vw, 4rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  --lh-heading: 1.15;
+  --lh-body: 1.6;
+
+  /* Spacing scale (8px base) */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-2xl: 10rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --radius: 2px;      /* sharp corners for cards/inputs, minimalist */
+  --radius-pill: 999px; /* pill buttons, Decorilla-style CTA */
+
+  /* Motion */
+  --transition-fast: 150ms ease;
+  --transition-base: 300ms ease;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuvasah — V1: Warm Editorial (Light / Artistic)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #FAF7F2;
+    --color-bg-alt: #F0EAE0;
+    --color-surface: #FFFFFF;
+    --color-ink: #2B2622;
+    --color-ink-muted: #6B6258;
+    --color-accent: #A8664F;
+    --color-accent-hover: #8F5340;
+    --color-line: #DFD6C8;
+    --font-heading: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+    --radius: 2px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-ink); line-height: 1.6; }
+  h1, h2, h3 { font-family: var(--font-heading); font-weight: 500; line-height: 1.15; }
+  h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-style: italic; font-weight: 400; }
+  h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+  p { color: var(--color-ink-muted); }
+  a { color: var(--color-accent); text-decoration: none; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section { padding: 5rem 0; }
+  .label { font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-accent); }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; border-bottom: 1px solid var(--color-line); }
+  nav { display: flex; gap: 2rem; }
+  nav a { color: var(--color-ink); font-size: 0.85rem; letter-spacing: 0.05em; text-transform: uppercase; }
+  .swatch { display: inline-block; width: 110px; height: 70px; border: 1px solid var(--color-line); margin-right: 0.75rem; }
+  .swatch-row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .btn { display: inline-block; padding: 0.75rem 2rem; border: 1px solid var(--color-ink); font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase; }
+  .btn-primary { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+  .card { background: var(--color-surface); border: 1px solid var(--color-line); padding: 2rem; }
+  input, textarea, select { width: 100%; padding: 0.75rem; border: 1px solid var(--color-line); background: var(--color-surface); font-family: var(--font-body); margin-bottom: 1rem; }
+  footer { padding: 3rem 2rem; border-top: 1px solid var(--color-line); color: var(--color-ink-muted); font-size: 0.85rem; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 1.5rem; }
+</style>
+</head>
+<body>
+<header>
+  <strong style="font-family:var(--font-heading); font-style:italic; font-size:1.4rem;">Nuvasah</strong>
+  <nav><a href="#">Home</a><a href="#">Portfolio</a><a href="#">Contact</a></nav>
+</header>
+<div class="container section">
+  <p class="label">Version 1 — Light / Artistic</p>
+  <h1>Spaces that feel like a quiet exhale</h1>
+  <p style="max-width:500px; margin-top:1rem;">Warm, editorial, tactile. Inspired by boutique studio portfolios — generous whitespace, italic serif headlines, soft terracotta warmth. Feels handcrafted, personal, slightly poetic.</p>
+</div>
+<div class="container section" style="padding-top:0;">
+  <h2>Color</h2>
+  <div class="swatch-row">
+    <div class="swatch" style="background:var(--color-bg)"></div>
+    <div class="swatch" style="background:var(--color-bg-alt)"></div>
+    <div class="swatch" style="background:var(--color-ink)"></div>
+    <div class="swatch" style="background:var(--color-accent)"></div>
+  </div>
+</div>
+<div class="container section" style="padding-top:0;">
+  <h2>Components</h2>
+  <div style="margin:1.5rem 0;"><button class="btn">Secondary</button> &nbsp;<button class="btn btn-primary">Enquire Now</button></div>
+  <div class="grid-3">
+    <div class="card"><h3 style="font-size:1.2rem;">Residence, Bandra</h3><p>Mumbai</p></div>
+    <div class="card"><h3 style="font-size:1.2rem;">Studio Apartment</h3><p>Pune</p></div>
+    <div class="card"><h3 style="font-size:1.2rem;">Family Home</h3><p>Bengaluru</p></div>
+  </div>
+  <div style="max-width:400px; margin-top:2rem;">
+    <input placeholder="Name"><textarea rows="3" placeholder="Message"></textarea>
+  </div>
+</div>
+<footer><div class="container">Nuvasah Interiors — Version 1</div></footer>
+</body>
+</html>
