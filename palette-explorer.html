@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nuvasah — Palette Options (same layout/fonts, bolder color)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family:'Inter',sans-serif; background:#fff; color:#222; }
+  h1.page-title { font-family:'Inter',sans-serif; font-size:1.1rem; text-align:center; padding:2rem 1rem 0.5rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase; color:#333; }
+  p.page-sub { text-align:center; color:#777; font-size:0.9rem; padding-bottom:2rem; }
+  .palette-block { border-top: 8px solid; margin-bottom: 3rem; }
+  .palette-header { padding: 1rem 2rem 0; }
+  .palette-header h2 { font-family:'Inter',sans-serif; font-size:0.9rem; text-transform:uppercase; letter-spacing:0.08em; font-weight:600; }
+  .palette-header p { font-size:0.85rem; color:#666; max-width:600px; margin-top:0.25rem; }
+
+  .demo { padding: 2rem; }
+  .demo-hero {
+    position: relative;
+    min-height: 55vh;
+    display:flex; align-items:flex-end; justify-content:center;
+    background-size: cover; background-position:center;
+    border-radius: 4px;
+    overflow:hidden;
+  }
+  .demo-hero::before { content:""; position:absolute; inset:0; }
+  .demo-hero-content { position:relative; z-index:1; padding: 3rem 2rem; text-align:center; max-width:600px; }
+  .demo-hero h3 { font-family:'Playfair Display', serif; font-weight:400; font-size: 2.2rem; line-height:1.15; margin-bottom:1rem; }
+  .demo-hero p { font-size:0.95rem; margin-bottom:1.5rem; }
+  .pill-btn { display:inline-block; padding:0.85rem 2.25rem; border-radius:999px; font-size:0.75rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; text-decoration:none; }
+
+  .swatch-row { display:flex; gap:0.75rem; padding: 1.5rem 2rem 0; flex-wrap:wrap; }
+  .swatch { width:90px; height:60px; border-radius:4px; border:1px solid rgba(0,0,0,0.08); }
+  .swatch-label { font-size:0.7rem; text-align:center; margin-top:0.35rem; color:#666; }
+  .swatch-block { text-align:center; }
+
+  .card-row { display:flex; gap:1rem; padding: 1.5rem 2rem 2rem; }
+  .demo-card { flex:1; padding:1.25rem; border-radius:4px; border:1px solid; }
+  .demo-card h4 { font-family:'Playfair Display', serif; font-weight:500; font-size:1.1rem; margin-bottom:0.25rem; }
+  .demo-card p { font-size:0.8rem; }
+</style>
+</head>
+<body>
+
+<h1 class="page-title">Palette Options — Same Layout &amp; Fonts, Bolder Color</h1>
+<p class="page-sub">All 4 keep Playfair Display + Inter, pill buttons, full-bleed photo hero. Only color changes.</p>
+
+<!-- OPTION A -->
+<div class="palette-block" style="border-color:#A8452E;">
+  <div class="palette-header">
+    <h2>Option A — Terracotta &amp; Deep Clay</h2>
+    <p>Warm base kept, but accent shifts from muted gold to a real saturated terracotta/burnt-orange — much more visible on screen and in thumbnails, still fits "warm editorial."</p>
+  </div>
+  <div class="swatch-row">
+    <div class="swatch-block"><div class="swatch" style="background:#FBF6EF;"></div><div class="swatch-label">bg</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#2B2622;"></div><div class="swatch-label">ink</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#A8452E;"></div><div class="swatch-label">accent</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#7A9B76;"></div><div class="swatch-label">accent 2</div></div>
+  </div>
+  <div class="demo">
+    <div class="demo-hero" style="background-image:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1400&auto=format&fit=crop');">
+      <div class="demo-hero-content" style="color:#FBF6EF;">
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(43,20,10,0.1) 0%, rgba(43,20,10,0.7) 100%); z-index:0;"></div>
+        <p style="position:relative; z-index:1;">Warm, uncluttered homes built around real life.</p>
+        <a class="pill-btn" style="position:relative; z-index:1; background:#A8452E; color:#FBF6EF;">Start My Project</a>
+      </div>
+    </div>
+    <div class="card-row">
+      <div class="demo-card" style="border-color:#E6D5C5; background:#fff;"><h4 style="color:#2B2622;">Residence, Bandra</h4><p style="color:#7A6F63;">Mumbai</p></div>
+      <div class="demo-card" style="border-color:#E6D5C5; background:#fff;"><h4 style="color:#2B2622;">Family Home</h4><p style="color:#7A6F63;">Bengaluru</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION B -->
+<div class="palette-block" style="border-color:#8A6D3B;">
+  <div class="palette-header">
+    <h2>Option B — Amber &amp; Forest</h2>
+    <p>Two-color system: a richer amber/mustard as primary accent, deep forest green as a secondary accent for variety (badges, hover states, section dividers). Feels more "designed" than a single muted gold.</p>
+  </div>
+  <div class="swatch-row">
+    <div class="swatch-block"><div class="swatch" style="background:#FAF5EA;"></div><div class="swatch-label">bg</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#241F1A;"></div><div class="swatch-label">ink</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#C98A2E;"></div><div class="swatch-label">accent</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#2F4A3C;"></div><div class="swatch-label">accent 2</div></div>
+  </div>
+  <div class="demo">
+    <div class="demo-hero" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop');">
+      <div class="demo-hero-content" style="color:#FAF5EA;">
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(20,15,5,0.1) 0%, rgba(20,15,5,0.68) 100%); z-index:0;"></div>
+        <p style="position:relative; z-index:1;">Warm, uncluttered homes built around real life.</p>
+        <a class="pill-btn" style="position:relative; z-index:1; background:#C98A2E; color:#241F1A;">Start My Project</a>
+      </div>
+    </div>
+    <div class="card-row">
+      <div class="demo-card" style="border-color:#2F4A3C; background:#2F4A3C;"><h4 style="color:#FAF5EA;">Residence, Bandra</h4><p style="color:#C7D4CB;">Mumbai</p></div>
+      <div class="demo-card" style="border-color:#E8DCC5; background:#fff;"><h4 style="color:#241F1A;">Family Home</h4><p style="color:#8A7C63;">Bengaluru</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION C -->
+<div class="palette-block" style="border-color:#1F3A34;">
+  <div class="palette-header">
+    <h2>Option C — Deep Teal &amp; Warm Sand</h2>
+    <p>A more confident departure: deep teal/pine as the dominant accent against warm sand, not just neutrals. Reads premium and distinctive without going dark-mode.</p>
+  </div>
+  <div class="swatch-row">
+    <div class="swatch-block"><div class="swatch" style="background:#F4EFE4;"></div><div class="swatch-label">bg</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#26221D;"></div><div class="swatch-label">ink</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#1F3A34;"></div><div class="swatch-label">accent</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#C97B4A;"></div><div class="swatch-label">accent 2</div></div>
+  </div>
+  <div class="demo">
+    <div class="demo-hero" style="background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=1400&auto=format&fit=crop');">
+      <div class="demo-hero-content" style="color:#F4EFE4;">
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,20,18,0.1) 0%, rgba(10,20,18,0.7) 100%); z-index:0;"></div>
+        <p style="position:relative; z-index:1;">Warm, uncluttered homes built around real life.</p>
+        <a class="pill-btn" style="position:relative; z-index:1; background:#C97B4A; color:#26221D;">Start My Project</a>
+      </div>
+    </div>
+    <div class="card-row">
+      <div class="demo-card" style="border-color:#1F3A34; background:#1F3A34;"><h4 style="color:#F4EFE4;">Residence, Bandra</h4><p style="color:#B9C7C2;">Mumbai</p></div>
+      <div class="demo-card" style="border-color:#E3D8C4; background:#fff;"><h4 style="color:#26221D;">Family Home</h4><p style="color:#8A7C63;">Bengaluru</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTION D -->
+<div class="palette-block" style="border-color:#B23A2E;">
+  <div class="palette-header">
+    <h2>Option D — Brick Red &amp; Charcoal (boldest)</h2>
+    <p>Most vibrant option: a confident brick-red accent against near-black charcoal and warm cream. Highest contrast, most "not dull" — best if the prospect wants real energy, not just warmth.</p>
+  </div>
+  <div class="swatch-row">
+    <div class="swatch-block"><div class="swatch" style="background:#F7F1E8;"></div><div class="swatch-label">bg</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#1C1815;"></div><div class="swatch-label">ink</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#B23A2E;"></div><div class="swatch-label">accent</div></div>
+    <div class="swatch-block"><div class="swatch" style="background:#D9A441;"></div><div class="swatch-label">accent 2</div></div>
+  </div>
+  <div class="demo">
+    <div class="demo-hero" style="background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1400&auto=format&fit=crop');">
+      <div class="demo-hero-content" style="color:#F7F1E8;">
+        <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,10,8,0.1) 0%, rgba(15,10,8,0.72) 100%); z-index:0;"></div>
+        <p style="position:relative; z-index:1;">Warm, uncluttered homes built around real life.</p>
+        <a class="pill-btn" style="position:relative; z-index:1; background:#B23A2E; color:#F7F1E8;">Start My Project</a>
+      </div>
+    </div>
+    <div class="card-row">
+      <div class="demo-card" style="border-color:#E8D9C2; background:#fff;"><h4 style="color:#1C1815;">Residence, Bandra</h4><p style="color:#8A7C63;">Mumbai</p></div>
+      <div class="demo-card" style="border-color:#B23A2E; background:#B23A2E;"><h4 style="color:#F7F1E8;">Family Home</h4><p style="color:#F0D6D0;">Bengaluru</p></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
