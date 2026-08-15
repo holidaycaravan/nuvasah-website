@@ -1,20 +1,22 @@
 /* ==========================================================================
    Nuvasah Interiors — Design Tokens
-   Style: Warm editorial (Version 1, approved) — minimalist, mid-century,
+   Style: Warm editorial (Version 1 layout, approved) — minimalist, mid-century,
    Scandinavian, refined against Decorilla.com's font pairing/structure.
-   Placeholder palette — revise once client logo/Instagram is available
+   Palette: Deep Teal & Warm Sand (Option C, client-approved after prospect feedback)
    ========================================================================== */
 
 :root {
-  /* Color — warm neutral base, muted gold/tan accent, low-contrast ink */
-  --color-bg: #FAF7F2;          /* warm off-white, paper-like */
-  --color-bg-alt: #F0EAE0;      /* slightly deeper section background */
+  /* Color — warm sand base, deep teal primary accent, burnt-orange secondary accent */
+  --color-bg: #F4EFE4;          /* warm sand background */
+  --color-bg-alt: #EBE3D2;      /* slightly deeper section background */
   --color-surface: #FFFFFF;     /* cards, forms */
-  --color-ink: #2B2622;         /* near-black warm charcoal, primary text */
+  --color-ink: #26221D;         /* near-black warm charcoal, primary text */
   --color-ink-muted: #6B6258;   /* secondary text, captions */
-  --color-accent: #B99B62;      /* muted gold/tan — editorial, Decorilla-inspired */
-  --color-accent-hover: #A3854E;
-  --color-line: #DFD6C8;        /* borders, dividers */
+  --color-accent: #1F3A34;      /* deep teal/pine — primary accent */
+  --color-accent-hover: #16281F;
+  --color-accent-2: #C97B4A;    /* warm burnt-orange — secondary accent, CTAs/highlights */
+  --color-accent-2-hover: #B3683A;
+  --color-line: #E3D8C4;        /* borders, dividers */
   --color-success: #5C7A5E;     /* form confirmation, muted sage */
   --color-error: #B54B3E;
 
