@@ -12,8 +12,8 @@
   --color-surface: #FFFFFF;     /* cards, forms */
   --color-ink: #26221D;         /* near-black warm charcoal, primary text */
   --color-ink-muted: #6B6258;   /* secondary text, captions */
-  --color-accent: #B8863E;      /* warm gold — primary accent, matches logo */
-  --color-accent-hover: #9A6E30;
+  --color-accent: #8A6423;      /* deep gold — primary accent (AA 4.66:1 as text on --color-bg), logo-matched */
+  --color-accent-hover: #6E4F1C;
   --color-accent-2: #D4AF6A;    /* lighter gold — secondary accent, CTA background */
   --color-accent-2-hover: #BE9552;
   --color-line: #E3D8C4;        /* borders, dividers */
