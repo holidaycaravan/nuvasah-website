@@ -6,16 +6,16 @@
    ========================================================================== */
 
 :root {
-  /* Color — warm sand base, deep teal primary accent, burnt-orange secondary accent */
+  /* Color — warm sand base, gold primary accent (logo-matched), lighter gold secondary accent */
   --color-bg: #F4EFE4;          /* warm sand background */
   --color-bg-alt: #EBE3D2;      /* slightly deeper section background */
   --color-surface: #FFFFFF;     /* cards, forms */
   --color-ink: #26221D;         /* near-black warm charcoal, primary text */
   --color-ink-muted: #6B6258;   /* secondary text, captions */
-  --color-accent: #1F3A34;      /* deep teal/pine — primary accent */
-  --color-accent-hover: #16281F;
-  --color-accent-2: #C97B4A;    /* warm burnt-orange — secondary accent, CTAs/highlights */
-  --color-accent-2-hover: #B3683A;
+  --color-accent: #B8863E;      /* warm gold — primary accent, matches logo */
+  --color-accent-hover: #9A6E30;
+  --color-accent-2: #D4AF6A;    /* lighter gold — secondary accent, CTA background */
+  --color-accent-2-hover: #BE9552;
   --color-line: #E3D8C4;        /* borders, dividers */
   --color-success: #5C7A5E;     /* form confirmation, muted sage */
   --color-error: #B54B3E;

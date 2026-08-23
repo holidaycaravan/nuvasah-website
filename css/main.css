@@ -232,7 +232,7 @@ img, video {
 .btn-primary {
   background: var(--color-accent-2);
   border-color: var(--color-accent-2);
-  color: var(--color-bg);
+  color: var(--color-ink);
   border-radius: var(--radius-pill);
   padding: var(--space-sm) var(--space-lg);
   font-weight: 600;
