@@ -97,3 +97,92 @@ document.addEventListener("DOMContentLoaded", function () {
     postToFormspree(data);
   });
 });
+
+// Home carousel / slideshow. Dependency-free. Each .carousel-slide may hold an
+// <img> or a <video>; active videos are left to the browser, inactive ones paused.
+document.addEventListener("DOMContentLoaded", function () {
+  const carousels = document.querySelectorAll(".home-carousel");
+
+  carousels.forEach(function (carousel) {
+    const slides = Array.prototype.slice.call(
+      carousel.querySelectorAll(".carousel-slide")
+    );
+    if (slides.length === 0) return;
+
+    const prevBtn = carousel.querySelector(".carousel-prev");
+    const nextBtn = carousel.querySelector(".carousel-next");
+    const dotsWrap = carousel.querySelector(".carousel-dots");
+    const interval = parseInt(carousel.getAttribute("data-interval"), 10) || 5000;
+    const reduceMotion =
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let index = 0;
+    let timer = null;
+
+    // Build one dot per slide.
+    const dots = [];
+    if (dotsWrap) {
+      slides.forEach(function (_, i) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "carousel-dot";
+        dot.setAttribute("aria-label", "Go to slide " + (i + 1));
+        dot.addEventListener("click", function () {
+          show(i);
+          restart();
+        });
+        dotsWrap.appendChild(dot);
+        dots.push(dot);
+      });
+    }
+
+    function show(i) {
+      index = (i + slides.length) % slides.length;
+      slides.forEach(function (slide, si) {
+        const active = si === index;
+        slide.classList.toggle("is-active", active);
+        const video = slide.querySelector("video");
+        if (video && !active) {
+          try { video.pause(); } catch (e) {}
+        }
+      });
+      dots.forEach(function (dot, di) {
+        dot.classList.toggle("is-active", di === index);
+      });
+    }
+
+    function nextSlide() { show(index + 1); }
+    function prevSlide() { show(index - 1); }
+
+    function start() {
+      if (reduceMotion || slides.length < 2) return;
+      stop();
+      timer = setInterval(nextSlide, interval);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+    function restart() { stop(); start(); }
+
+    if (nextBtn) nextBtn.addEventListener("click", function () { nextSlide(); restart(); });
+    if (prevBtn) prevBtn.addEventListener("click", function () { prevSlide(); restart(); });
+
+    // Pause while the visitor is interacting.
+    carousel.addEventListener("mouseenter", stop);
+    carousel.addEventListener("mouseleave", start);
+    carousel.addEventListener("focusin", stop);
+    carousel.addEventListener("focusout", start);
+
+    // Hide single-arrow/dot controls when there's nothing to advance to.
+    if (slides.length < 2) {
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+      if (dotsWrap) dotsWrap.style.display = "none";
+    }
+
+    carousel.classList.add("is-ready");
+    show(0);
+    start();
+  });
+});
