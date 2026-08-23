@@ -183,6 +183,13 @@ img, video {
   padding: 0 var(--space-md);
 }
 
+/* Headings inside a photo-band inherit the container's light color instead of the
+   global h1-h4 dark-ink rule, so they stay legible over the dark overlay. */
+.photo-band-content h2,
+.photo-band-content h3 {
+  color: inherit;
+}
+
 /* Navigation */
 .site-header {
   display: flex;
